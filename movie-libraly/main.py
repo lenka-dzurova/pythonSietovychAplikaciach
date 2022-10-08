@@ -22,16 +22,18 @@ movie_libraly.to_string()
 
 menu_view = MenuView()
 
-match menu_view.menu:
-            case MenuActionEnum.ADD_MOVIE:
+while True:
+    match menu_view.menu:  
+            case MenuActionEnum.ADD_MOVIE.value:
                 movie_libraly.addMovie(menu_view.add_movie())
                 pass
-            case MenuActionEnum.REMOVE_MOVIE:
+            case MenuActionEnum.REMOVE_MOVIE.value:
                 pass
-            case MenuActionEnum.SHOW_LIBRALY:
+            case MenuActionEnum.SHOW_LIBRALY.value:
                 movie_libraly.to_string()
                 pass
-            case MenuActionEnum.QUIT:
+            case MenuActionEnum.QUIT.value:
+                menu_view.quit_option()
                 pass
         
 #print(she_hulk.to_string())

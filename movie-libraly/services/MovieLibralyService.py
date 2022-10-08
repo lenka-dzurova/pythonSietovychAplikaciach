@@ -1,14 +1,10 @@
 from ast import Num
-from fcntl import F_OFD_GETLK
-import imp
-from re import L
-
-
 from models.MovieModel import MovieModel
+
 
 class MovieLibralyService():
     def __init__(self) -> None:
-        self.movies:list = list()
+        self.movies:list(MovieModel) = list()
         pass
 
     def addMovie(self, paMovie:MovieModel):
@@ -21,7 +17,7 @@ class MovieLibralyService():
 
     def to_string(self):
         print("*************** MOVIE LIBRALY **************************")
-        for movie in self.movie:
-            print(movie)
+        for movie in self.movies:
+            print(movie.to_string())
             print("")
         print("")

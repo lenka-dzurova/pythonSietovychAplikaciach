@@ -1,7 +1,5 @@
 from array import array
 from ast import Num
-from multiprocessing import set_forkserver_preload
-from turtle import st
 
 
 class MovieModel:
@@ -15,7 +13,6 @@ class MovieModel:
 
     def genre_to_string(self):
         return '/'.join(self.genre)
-        pass
 
     def to_string(self):
-        return f'Title: {self.title:10} | Description: {self.description:20} | Year: {self.year} | Genre: {self.genre_to_string} | Rating: {self.rating}'
+        return f'Title: {self.title:10} | Description: {self.description:20} | Year: {self.year} | Genre: {self.genre_to_string} | Rating: {self.rating}%'
